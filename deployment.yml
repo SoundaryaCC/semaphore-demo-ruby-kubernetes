@@ -23,11 +23,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: semaphore-demo-ruby-kubernetes-lb
+  name: semaphore-demo-ruby-kubernetes-svc
 spec:
   selector:
     app: semaphore-demo-ruby-kubernetes
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - port: 80
       targetPort: 4567
