@@ -16,7 +16,7 @@ blocks:
           commands:
             - checkout
             - pwd
-            - ls -la /home/semaphore
+            - ls -la /home/semaphore/.kube
             - kubectl get nodes
             - kubectl get pods
             - envsubst < deployment.yml | tee _deploy.yml
