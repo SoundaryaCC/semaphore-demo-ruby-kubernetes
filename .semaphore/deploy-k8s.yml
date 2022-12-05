@@ -19,7 +19,9 @@ blocks:
             - ls -la /home/semaphore/.kube
             - aws configure set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
             - aws configure set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"
+            - aws eks --region ap-southeast-1 update-kubeconfig --name obortech-staging
             - cat /home/semaphore/.kube/config
+            - kubectl cluster-info
             - kubectl get nodes
             - kubectl get pods
             - envsubst < deployment.yml | tee _deploy.yml
