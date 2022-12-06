@@ -17,6 +17,7 @@ blocks:
           commands:
             - checkout
             - pwd
+            - ls -lrt
             - ls -la /home/semaphore/.kube
             - echo "${AWS_ACCESS_KEY_ID}"
             - echo "${AWS_SECRET_ACCESS_KEY}"
